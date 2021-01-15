@@ -1,0 +1,150 @@
+:root{
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+html{
+  font-family: 'Spartan', sans-serif;
+}
+body{
+  position: relative;
+}
+body > img:first-child{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body > img:last-of-type{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 68rem){
+  body{
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 85rem){
+  body{
+    height: 100vh;
+  }
+  body > img:first-child{
+    width: 35rem;
+  }
+  body > img:last-of-type{
+    width: 50rem;
+  }
+}
+main{
+  z-index: 999;
+}
+@media screen and (min-width: 68rem){
+  main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* -------------------- ESTILOS -------------------- */
+/* -------------------- HEADER -------------------- */
+.header-title > h1{
+  color: var(--very-dark-magenta)
+}
+.header-title > h1 ~ small{
+  color: var(--dark-grayish-magenta)
+}
+.header-body-item{
+  background-color: var(--light-grayish-magenta);
+  border-radius: 5px;
+}
+.stars{
+  justify-content: space-between;
+}
+.stars ~ p{
+  font-size: .7rem;
+  color: var(--very-dark-magenta)
+}
+.stars img{
+  width: 15px;
+}
+@media screen and (min-width: 68rem){
+  .header-site > .container{
+    justify-content: space-between;
+  }
+  .header-title{
+    flex-basis: 50%;
+  }
+  .header-body{
+    flex-basis: 50%;
+  }
+  .header-body-item{
+    width: 80%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .header-body-item:nth-child(2){
+    align-self: center;
+  }
+  .header-body-item:last-child{
+    align-self:flex-end;
+  }
+}
+
+/* -------------------- TESTIMONIALS -------------------- */
+.testimonial{
+  background-color: var(--very-dark-magenta);
+  border-radius: 10px;
+}
+.testimonial-img > img{
+  width: 40px;
+  border-radius: 50%;
+}
+.testimonial-desc{
+  align-items: center;
+}
+.testimonial-profile > p:last-child{
+  margin-top: .3rem;
+  font-size: .8rem;
+  color: var(--soft-pink);
+  font-weight: 400;
+}
+@media screen and (min-width: 68rem){
+  .main-body{
+    height: 18rem;
+  }
+  .container > .testimonials,
+  .main-body > .container{
+    height: 100%;
+  }
+  .testimonial:first-child{
+    align-self: flex-start;
+  }
+  .testimonial:nth-child(2){
+    align-self: center;
+  }
+  .testimonial:last-child{
+    align-self: flex-end;
+  }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  background-color: var(--soft-pink);
+  z-index: 999;
+}
+.attribution a{
+  color: black;
+}
+@media screen and (min-width: 68rem){
+  .attribution{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
